@@ -16,15 +16,19 @@ source devel/setup.bash
 # Running Steps
 ```bash
 The debug modes can be switched in blob_detection.launch.
-In line 8, the arg debug_mode has four values: not_assigned, debug_view, ros, deploy.
-not_assigned will turn off this argument
-debug_view for OpenCV debug view
-ros for rviz and rqt_reconfigure view
-deploy for running the node with configured params loading from a yaml file
-NB: Do NOT touch the arg debug_view in line 7, unless you are familiar with the opencv_apps package and change the value of debug_mode in line 8 to "not_assigned".
+in line 8, the arg debug_mode has four values: not_assigned, debug_view, ros, deploy.
+"not_assigned" for turning off this argument
+"debug_view" for OpenCV debug view
+"ros" for rviz and rqt_reconfigure view
+"deploy" for running the node with configured params loading from a yaml file
+NB: Do NOT touch the arg debug_view in line 7, unless you are familiar with the opencv_apps package 
+and change the value of debug_mode in line 8 to "not_assigned".
 ```
 ```bash
-One suggestion of using the debug_mode is, first configure the parameters under "ros" debug mode, and cd to opencv_apps, then save the configured parameters to a YAML file using the command `rosparam dump config/blob_detection_config.yaml blob_detection`. Then switch to the "deploy" mode.
+One suggestion of using the debug_mode is, first configure the parameters under "ros" debug mode,
+and cd to opencv_apps, then save the configured parameters to a YAML file using the command:
+rosparam dump config/blob_detection_config.yaml blob_detection
+Then switch to the "deploy" mode.
 ```
 ## Running the blob_detection_nodelet
 NB: Replace "YourTopic" in the following command to the actual image topic.
