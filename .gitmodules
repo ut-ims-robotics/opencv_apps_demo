@@ -1,0 +1,6 @@
+[submodule "src/opencv_apps"]
+	path = src/opencv_apps
+	url = https://github.com/ut-ims-robotics/opencv_apps
+[submodule "src/opencv_apps_demo"]
+	path = src/opencv_apps_demo
+	url = https://github.com/HuiShiSerenaShi/opencv_apps_demo
